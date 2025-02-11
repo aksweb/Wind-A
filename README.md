@@ -1,6 +1,6 @@
-# IRCTC API Clone
+# IRCTC API Clone 
 This project is a backend API for a railway management system similar to IRCTC. It allows users to register, log in, check train availability, book seats, and view booking details. Admins can add new trains and manage the system.
-
+## Server is deployed on: https://workindia-assignment.onrender.com/ 
 ## Table of Contents
 - [Features](#features)
 - [Endpoints](#endpoints)
