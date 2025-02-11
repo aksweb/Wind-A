@@ -1,0 +1,41 @@
+### REST Client Tests for IRCTC API
+@baseUrl = http://localhost:3000/api
+
+### Register Normal User
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "testuser@example.com",
+    "password": "password123"
+}
+
+### Register Admin User
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "email": "admin@irctc.com",
+    "password": "admin123",
+    "role": "admin"
+}
+
+### Login Normal User
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "testuser@example.com",
+    "password": "password123"
+}
+
+### Login Admin User
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin1@irctc.com",
+    "password": "admin123"
+}
