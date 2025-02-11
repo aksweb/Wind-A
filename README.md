@@ -32,9 +32,9 @@ This project is a backend API for a railway management system similar to IRCTC. 
 #### Request Body:
 ```json
 {
-  "username": "user1",
-  "password": "password123",
-  "email": "user1@example.com"
+  "username": "krinsha",
+  "password": "admin@123",
+  "email": "krishna@sbi.com"
 }
 ```
 #### Response:
@@ -44,6 +44,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
   "userId": 1
 }
 ```
+![User Reg](output/user_reg.png)
 
 ### 2. Admin Registration
 **URL:** `/auth/register`  
@@ -66,6 +67,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
   "adminId": 1
 }
 ```
+![User Reg](output/Admin_reg.png)
 
 ### 3. User Login
 **URL:** `/auth/login`  
@@ -132,6 +134,10 @@ Authorization: Bearer <admin_jwt_token>
   "train_id": 1
 }
 ```
+### Admin can add trains using their token
+![Adding train by admin](output/train_add_admin.png)
+### Users can't add train.
+![user_adding_train](output/train_add_user.png)
 
 ### 6. Check Availability
 **URL:** `/api/trains/availability`  
@@ -152,8 +158,9 @@ Authorization: Bearer <admin_jwt_token>
   }
 ]
 ```
+![check](output/check_avilability.png)
 
-### 7. Book a Seat
+### 7. Book a Seat (Only available seats can be booked)
 **URL:** `/api/bookings`  
 **Method:** `POST`  
 **Description:** Book a seat on a specific train.  
@@ -180,6 +187,8 @@ Authorization: Bearer <user_jwt_token>
   ]
 }
 ```
+![check](output/booking.png)
+![check](output/booking_fail.png)
 
 ### 8. Get Booking Details
 **URL:** `/api/bookings`  
@@ -205,6 +214,7 @@ Authorization: Bearer <user_jwt_token>
   ]
 }
 ```
+![check](output/book_det.png)
 
 ## Setup
 ### Clone the Repository:
