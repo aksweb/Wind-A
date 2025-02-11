@@ -24,7 +24,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
 - **Booking Details:** Users can view their booking details.
 
 ## Endpoints
-### 1. User Registration
+### User Registration
 **URL:** `/auth/register`  
 **Method:** `POST`  
 **Description:** Register a new user.  
@@ -46,7 +46,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
 ```
 ![User Reg](output/user_reg.png)
 
-### 2. Admin Registration
+### Admin Registration
 **URL:** `/auth/register`  
 **Method:** `POST`  
 **Description:** Register a new admin.  
@@ -69,7 +69,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
 ```
 ![User Reg](output/Admin_reg.png)
 
-### 3. User Login
+### User Login
 **URL:** `/auth/login`  
 **Method:** `POST`  
 **Description:** Log in as a user.  
@@ -89,7 +89,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
 }
 ```
 
-### 4. Admin Login
+### Admin Login
 **URL:** `/auth/login`  
 **Method:** `POST`  
 **Description:** Log in as an admin.  
@@ -109,7 +109,7 @@ This project is a backend API for a railway management system similar to IRCTC. 
 }
 ```
 
-### 5. Add Train by Admin
+### Add Train by Admin
 **URL:** `/api/trains`  
 **Method:** `POST`  
 **Description:** Add a new train (only for admins).  
@@ -139,7 +139,7 @@ Authorization: Bearer <admin_jwt_token>
 ### Users can't add train.
 ![user_adding_train](output/train_add_user.png)
 
-### 6. Check Availability
+### Check Availability
 **URL:** `/api/trains/availability`  
 **Method:** `GET`  
 **Description:** Check seat availability between two stations.  
@@ -160,7 +160,8 @@ Authorization: Bearer <admin_jwt_token>
 ```
 ![check](output/check_avilability.png)
 
-### 7. Book a Seat (Only available seats can be booked)
+### Book a Seat
+### (Only available seats can be booked)
 **URL:** `/api/bookings`  
 **Method:** `POST`  
 **Description:** Book a seat on a specific train.  
@@ -190,7 +191,7 @@ Authorization: Bearer <user_jwt_token>
 ![check](output/booking.png)
 ![check](output/booking_fail.png)
 
-### 8. Get Booking Details
+### Get Booking Details
 **URL:** `/api/bookings`  
 **Method:** `GET`  
 **Description:** Get all bookings for the authenticated user.  
